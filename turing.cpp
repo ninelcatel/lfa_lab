@@ -13,7 +13,7 @@
   [states]
   state_1 value
   state_2 value
-  (#! value refers to S for start_state, F for final_state, or anything else for intermediate states;
+  (value refers to S for start_state, F for final_state, or anything else for intermediate states usually 0)
   there can only be one start state, but if there are multiple states marked with S, the last one will be considered the start state;
   there can only be one final state, but if there are multiple states marked with F, the last one will be considered the final state;
   if a state is both a start and final state, it must be set separately, not on the same line)
