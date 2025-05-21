@@ -1,0 +1,57 @@
+[states]
+q_start S
+q_move_to_at_for_0 I
+q_move_to_at_for_1 I
+q_seek_write_spot_for_0 I
+q_seek_write_spot_for_1 I
+q_return_past_at I
+q_seek_source_marker I
+q_final F
+
+[sigma]
+0
+1
+$
+@
+_
+x
+y
+
+[rules]
+q_start 0 q_move_to_at_for_0 x R
+q_start 1 q_move_to_at_for_1 y R
+q_start $ q_final $ R
+q_move_to_at_for_0 0 q_move_to_at_for_0 0 R
+q_move_to_at_for_0 1 q_move_to_at_for_0 1 R
+q_move_to_at_for_0 $ q_move_to_at_for_0 $ R
+q_move_to_at_for_0 x q_move_to_at_for_0 x R
+q_move_to_at_for_0 y q_move_to_at_for_0 y R
+q_move_to_at_for_0 _ q_move_to_at_for_0 _ R
+q_move_to_at_for_0 @ q_seek_write_spot_for_0 @ R
+q_move_to_at_for_1 0 q_move_to_at_for_1 0 R
+q_move_to_at_for_1 1 q_move_to_at_for_1 1 R
+q_move_to_at_for_1 $ q_move_to_at_for_1 $ R
+q_move_to_at_for_1 x q_move_to_at_for_1 x R
+q_move_to_at_for_1 y q_move_to_at_for_1 y R
+q_move_to_at_for_1 _ q_move_to_at_for_1 _ R
+q_move_to_at_for_1 @ q_seek_write_spot_for_1 @ R
+q_seek_write_spot_for_0 0 q_seek_write_spot_for_0 0 R
+q_seek_write_spot_for_0 1 q_seek_write_spot_for_0 1 R
+q_seek_write_spot_for_0 _ q_return_past_at 0 L
+q_seek_write_spot_for_1 0 q_seek_write_spot_for_1 0 R
+q_seek_write_spot_for_1 1 q_seek_write_spot_for_1 1 R
+q_seek_write_spot_for_1 _ q_return_past_at 1 L
+q_return_past_at 0 q_return_past_at 0 L
+q_return_past_at 1 q_return_past_at 1 L
+q_return_past_at x q_return_past_at x L
+q_return_past_at y q_return_past_at y L
+q_return_past_at $ q_return_past_at $ L
+q_return_past_at _ q_return_past_at _ L
+q_return_past_at @ q_seek_source_marker @ L
+q_seek_source_marker 0 q_seek_source_marker 0 L
+q_seek_source_marker 1 q_seek_source_marker 1 L
+q_seek_source_marker $ q_seek_source_marker $ L
+q_seek_source_marker @ q_seek_source_marker @ L
+q_seek_source_marker _ q_seek_source_marker _ L
+q_seek_source_marker x q_start x R
+q_seek_source_marker y q_start y R

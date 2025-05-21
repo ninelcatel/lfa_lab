@@ -1,0 +1,33 @@
+# even number of 0s and odd number of 1s
+# automaton made with Gemini
+[start]
+keyword:alphabet
+0
+1
+[end]
+[start]
+keyword:firstState
+q_EE
+[end]
+[start]
+keyword:delta
+(q_EE,0)=q_OE
+(q_EE,1)=q_EO
+(q_EO,0)=q_OO
+(q_EO,1)=q_EE
+(q_OE,0)=q_EE
+(q_OE,1)=q_OO
+(q_OO,0)=q_EO
+(q_OO,1)=q_OE
+[end]
+[start]
+keyword:states
+q_EE
+q_EO
+q_OE
+q_OO
+[end]
+[start]
+keyword:acceptedStates
+q_EO
+[end]

@@ -1,0 +1,18 @@
+[states]
+q0 S
+q1 0
+q2 0
+q3 F
+[sigma]
+$
+0
+1
+e
+[rules]
+q0 e e $ q1
+q1 0 e 0 q1
+q1 1 0 e q2
+q2 1 0 e q2
+q2 1 $ $ q2
+q2 e $ e q3
+q3 1 e e q3

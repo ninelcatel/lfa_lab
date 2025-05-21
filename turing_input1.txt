@@ -1,0 +1,16 @@
+[states]
+q0 S
+q1 0
+q2 F
+
+[sigma]
+$
+&
+*
+1
+
+[rules]
+q0 1 q1 $ R
+q1 1 q0 & R
+q0 * q2 * R 
+q1 * q2 * R
