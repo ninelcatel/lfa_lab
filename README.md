@@ -11,9 +11,15 @@ Pentru a rula fiecare program este necesar sa fie dat ca  input numele fisierulu
 Rulat si verificat pe Arch Linux versunea 6.14.2 insa ar trebui sa functioneze pe orice fel de distributie (Nu este verificat pe windows dar ar trebui sa functioneze)
 
 In terminalul folderului dorit: 
+
 git clone https://github.com/ninelcatel/lfa_lab.git
+
 cd lfa_lab
+
 pt c++:
+
 g++ <file.cpp> -o <executable name> && ./<executable name> [< "filename.format"]
+
 pt python
+
 python DFA_NFA.py [< "filename.format"]
