@@ -284,9 +284,14 @@ public:
 };
 
 int main()
-{
+{   
+    std::string filename;
+    std::cout << "Enter Turing Machine definition filename: ";
+    std::cin >> filename;
+    std::cin.ignore(); // Clear the newline character
+    
     TuringMachine tm;
-    if (tm.loadFromFile("turing.txt"))
+    if (tm.loadFromFile(filename))
     {
         tm.run();
     }
