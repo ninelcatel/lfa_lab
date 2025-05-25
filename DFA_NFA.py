@@ -56,7 +56,7 @@ def createAutomaton(toParse):
             # instead of adding them to the automaton dictionary.
             if keyword == 'delta':
                 i, transitions = collect_delta_transitions(i + 1, lines)
-                delta_transitions.extend(raw_transitions)
+                delta_transitions.extend(transitions)
             else:
                 i = append(i + 1, lines, keyword, isNFA)
         else:

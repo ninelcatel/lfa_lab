@@ -22,7 +22,7 @@
   letter_2
 
   [rules]
-  state_1 input_value pop_value push_value state_2 (#! first rule must have the start state on the first state position)
+  state_1 input_value pop_value push_value state_2 (first rule must have the start state on the first state position)
   state_3 input_value pop_value push_value state_4
 
  */
@@ -338,7 +338,7 @@ public:
                     }
                     
                     if (!processedInput) {
-                        std::cout << "No valid transition for input symbol '" << value << "' from state '" << currState << "'" << std::endl;
+                        std::cout << "No valid transition for input symbol " << value << " from state " << currState << std::endl;
                         std::cout << "Input rejected!" << std::endl;
                         return;
                     }
